@@ -1,5 +1,7 @@
 import React from "react";
 import firebase from "../util/firebase";
+import Checkmark from "./Checkmark";
+import "../App.css";
 
 function Todo({ todo }) {
   // **** DELETE ****
@@ -19,7 +21,9 @@ function Todo({ todo }) {
 
   return (
     <div>
-      <h1>{todo.title}</h1>
+      <h1>
+        {todo.title} {todo.complete ? <Checkmark /> : ""}
+      </h1>
       <button onClick={deleteToDo}>Delete</button>
       <button onClick={completeToDo}>Complete</button>
     </div>

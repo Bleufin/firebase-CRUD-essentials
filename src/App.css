@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+:root {
+  --borderWidth: 7px;
+  --height: 20px;
+  --width: 12px;
+  --borderColor: #78b13f;
+}
+
+.check {
+  display: inline-block;
+  margin-left: 0.5rem;
+  transform: rotate(45deg);
+  height: var(--height);
+  width: var(--width);
+  border-bottom: var(--borderWidth) solid var(--borderColor);
+  border-right: var(--borderWidth) solid var(--borderColor);
+}
+
+.complete {
+  text-decoration: line-through;
+}
